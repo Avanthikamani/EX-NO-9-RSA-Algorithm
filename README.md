@@ -3,6 +3,11 @@
 ## AIM:
 To Implement RSA Encryption Algorithm in Cryptography
 
+NAME:AVANTHIKA.M
+
+
+RED NO:2122241110009
+
 ## Algorithm:
 
 
@@ -36,11 +41,47 @@ Step 5: **Security Foundation
 The security of RSA relies on the difficulty of factoring large numbers; thus, choosing sufficiently large prime numbers for \( p \) and \( q \) is crucial for security.
 
 ## Program:
+```
+
+p = 61
+q = 53
+
+n = p * q
+phi = (p - 1) * (q - 1)
+
+e = 17
+d = 2753
+
+message = input("Enter plaintext: ")
+
+encrypted = []
+
+for ch in message:
+    encrypted.append(pow(ord(ch), e, n))
+
+print("Encrypted Message:", encrypted)
+
+decrypted = ""
+
+for num in encrypted:
+    decrypted += chr(pow(num, d, n))
+
+print("Decrypted Message:", decrypted)
+
+print("Program executed successfully")
+```
 
 
 
 
 ## Output:
+
+
+   <img width="1558" height="662" alt="EXP9 CRYPTO" src="https://github.com/user-attachments/assets/6c06208b-0563-4bc1-b9b5-d3397349e9a9" />
+
+
+
+
 
 
 
